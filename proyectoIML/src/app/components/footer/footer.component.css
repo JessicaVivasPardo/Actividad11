@@ -1,0 +1,35 @@
+/*Estilos del footer*/
+.page-footer {
+    margin-top: 35px;
+    background-color: rgb(31, 164, 182);
+    color: white;
+  }
+  .page-footer li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /*Estilos icono whatsapp*/
+  .whatsapp{
+    width: 85px;
+    height: 85px;
+    display: block;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1000;
+    position: fixed;
+  }
+  /* Scroll top */
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 20px; 
+    z-index: 99;
+    outline: none;
+    background-color: black;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+  }

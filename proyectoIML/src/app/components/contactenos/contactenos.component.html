@@ -1,0 +1,86 @@
+<!-- Formulario -->
+
+<form
+  #registrarCotizacionForm="ngForm"
+  (ngSubmit)="cotizar()"
+  class="container shadow-lg rounde border border-info p-5"
+>
+  <div class="container">
+    <h3 class="text-info">Contáctanos</h3>
+    <div class="form-row mt-5">
+      <div class="form-group col-md-6">
+        <label for="inputName">Nombre</label>
+        <input
+          #name="ngModel"
+          [(ngModel)]="client.name"
+          name="name"
+          type="text"
+          class="form-control"
+          id="inputName"
+          placeholder="Escriba su nombre"
+          maxlength="35"
+        />
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputEmail">Correo</label>
+        <input
+          #email="ngModel"
+          [(ngModel)]="client.email"
+          name="email"
+          type="email"
+          class="form-control"
+          id="inputEmail"
+          placeholder="Escriba su correo"
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputMensaje">Deja tu mensaje</label>
+      <input
+        #message="ngModel"
+        [(ngModel)]="client.message"
+        type="text"
+        class="form-control"
+        id="inputMensaje"
+        placeholder="(Deja un comentario)"
+        name="message"
+        style="min-height: 100px; max-height: 200px"
+      />
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputTel">Teléfono</label>
+        <input
+          #tel="ngModel"
+          [(ngModel)]="client.tel"
+          name="tel"
+          type="tel"
+          class="form-control"
+          id="inputTel"
+        />
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputServicio">¿Qué servicio buscas?</label>
+        <select
+          #service="ngModel"
+          [(ngModel)]="client.service"
+          name="service"
+          id="inputServicio"
+          class="form-control"
+        >
+          <option selected>Elije una opción</option>
+          <option>Desinfección</option>
+          <option>Mantenimiento avisos publicitarios</option>
+          <option>Limpieza vidrios y fachadas</option>
+          <option>Reparaciones locativas</option>
+          <option>Limpieza cajeros</option>
+          <option>Otros servicios</option>
+        </select>
+      </div>
+    </div>
+    <button type="submit" class="btn-primary bg-info border-info">
+      Enviar
+    </button>
+  </div>
+</form>
+<app-footer></app-footer>

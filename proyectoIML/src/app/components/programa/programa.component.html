@@ -1,0 +1,212 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div
+        class="modal fade"
+        tabindex="-1"
+        aria-labelledby="modalWindow"
+        aria-hidden="true"
+        id="modalWindow"
+      >
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="modalWindow">
+                Fomulario de servicio
+              </h3>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Cerrar"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form  #programarServicioForm="ngForm"
+              (ngSubmit)="programar()" class="programForm" >
+                <div class="row">
+                  <label
+                    for="inputName"
+                    class="labelForm col-sm-12 col-form-label"
+                    >Nombre del solicitante</label
+                  >
+                  <div class="col-sm-12">
+                    <input
+                    #name="ngModel"
+                    [(ngModel)]="program.name"
+                    name="name"
+                      input
+                      type="text"
+                      class="form-control"
+                      id="inputName"
+                      maxlength="35"
+                    />
+                  </div>
+                  <label
+                    for="inputDate"
+                    class="labelForm col-sm-12 col-form-label"
+                    >Fecha a realizar el servicio</label
+                  >
+                  <div class="col-sm-12">
+                    <input  
+                    #date="ngModel"
+                    [(ngModel)]="program.date"
+                    name="date" type="date" class="form-control" id="inputDate" />
+                  </div>
+                  <label
+                    for="inputAdress"
+                    class="labelForm col-sm-12 col-form-label"
+                    >Dirección del servicio</label
+                  >
+                  <div class="col-sm-12">
+                    <input #adress="ngModel"
+                    [(ngModel)]="program.adress"
+                    name="adress" type="text" class="form-control" id="inputAdress" />
+                  </div>
+                </div>
+                <label for="inputTel" class="labelForm col-sm-12 col-form-label"
+                  >Teléfono del solicitante</label
+                >
+                <div class="col-sm-12">
+                  <input #tel="ngModel"
+                  [(ngModel)]="program.tel"
+                  name="tel" type="tel" class="form-control" id="inputTel" />
+                </div>
+                <label
+                  for="inputEmail"
+                  class="labelForm col-sm-12 col-form-label"
+                  >Correo del solicitante</label
+                >
+                <div class="col-sm-12">
+                  <input #email="ngModel"
+                  [(ngModel)]="program.email"
+                  name="email" type="email" class="form-control" id="inputEmail" />
+                </div>
+
+                <div class="row mb-3 mt-3">
+                  <p class="col-12">Servicio que desea realizar</p>
+                  <div class="col-sm-10 offset-sm-2">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="gridCheck1"
+                      />
+                      <label class="form-check-label" for="gridCheck1">
+                        Desinfección por termo-nebulización
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="gridCheck2"
+                      />
+                      <label class="form-check-label" for="gridCheck2">
+                        Limpieza avisos publicitarios
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="gridCheck3"
+                      />
+                      <label class="form-check-label" for="gridCheck3">
+                        Limpieza de vidrios y fachadas
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="gridCheck4"
+                      />
+                      <label class="form-check-label" for="gridCheck4">
+                        Reparaciones locativas
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="gridCheck5"
+                      />
+                      <label class="form-check-label" for="gridCheck5">
+                        Limpieza cajeros automáticos
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="gridCheck6"
+                      />
+                      <label class="form-check-label" for="gridCheck6">
+                        Servicios de limpieza
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <h4 class="msj col-12">¡Gracias por confiar en nosotros!</h4>
+                  <img
+                    class="col-4 img-fluid mx-auto"
+                    id="iconIML"
+                    src="../../../assets/images/favicon.png"
+                    alt="iconIML"
+                  />
+                </div>
+                <div class="btn-form mt-3">
+                  <button
+                    type="submit"
+                    class="btn btn-info"
+                  >
+                    Enviar
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-info" data-dismiss="modal">
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="content" class="container col-6">
+  <div class="container">
+    <h1 class="title">¡Programa tu servicio!</h1>
+    <div class="text">
+      <p>
+        ¡Bienvenido a nuestra sección de programación! <br />Si aún no has
+        podido contactarte y programar tu servicio ingresa y llena el formulario
+        de servicio. <br />
+        Los horarios de servicios son suceptibles a modificaciones de acuerdo a
+        la disponibilidad de horarios, por lo tanto muy pronto unos de nuestros
+        asesores estará en contacto contigo para confirmar el servicio.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="mt-4 mx-auto mb-3">
+      <button
+        class="btn-program"
+        type="button"
+        data-toggle="modal"
+        data-target="#modalWindow"
+      >
+        ¡Prográma ya!
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

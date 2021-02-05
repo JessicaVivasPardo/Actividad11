@@ -1,0 +1,62 @@
+<!-- Navbar con Boostrap -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <a class="navbar-brand" href="#"
+    ><img class="icon" src="../../../assets/images/Imagen1.png" alt="icono"
+  /></a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/home']">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/nosotros']">Nosotros</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          [routerLink]="['/servicios']"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Servicios
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" [routerLink]="['/servicios']">Desinfección</a>
+          <a class="dropdown-item" [routerLink]="['/servicios']"
+            >Avisos publicitarios</a
+          >
+          <a class="dropdown-item" [routerLink]="['/servicios']"
+            >Limpieza de vidrios y fachadas</a
+          >
+          <a class="dropdown-item" [routerLink]="['/servicios']"
+            >Reparaciones locativas</a
+          >
+          <a class="dropdown-item" [routerLink]="['/servicios']"
+            >Limpieza cajeros automáticos</a
+          >
+          <a class="dropdown-item" [routerLink]="['/servicios']">Sevicio de limpieza</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/contactenos']">Contáctenos</a>
+      </li>
+      <li>
+        <a class="nav-link" [routerLink]="['/programa']">Prográmate</a>
+      </li>
+    </ul>
+  </div>
+</nav>

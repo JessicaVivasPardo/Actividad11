@@ -1,0 +1,14 @@
+/*Estilo formulario*/
+form{
+    margin: 50px;
+    background-color: white;
+}
+button{
+    
+    padding: 5px;
+}
+.listaFormulario li a{
+
+    color: white; 
+    text-decoration: none;
+}

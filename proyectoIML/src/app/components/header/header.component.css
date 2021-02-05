@@ -1,0 +1,9 @@
+/*Estilos head */
+.icon {
+    height:65px;
+    width:50px;
+}
+/*Estilos nav-var*/
+.dropdown-item:hover{
+    background-color: rgb(31, 164, 182);
+}
