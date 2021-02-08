@@ -5,7 +5,7 @@ var ClientSchema = new Schema({
     name: String,
     email: String,
     message: String ,
-     tel: Number,
+    tel: Number,
     service: String,
 });
 
