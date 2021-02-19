@@ -14,13 +14,14 @@ import {allowedNodeEnvironmentFlags} from 'process';
 export class ContactenosComponent implements OnInit {
 
   public client: Client;
- 
+
+
   constructor(private clientService:UserService) {
     this.client = new Client('','','','',0,'');
     
   }
 
-  ngOnInit(): void {  }
+  ngOnInit(): void { }
 
 cotizar(){
 

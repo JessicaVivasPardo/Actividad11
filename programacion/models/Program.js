@@ -6,8 +6,15 @@ var ProgramSchema = new Schema({
     date: String,
     adress: String,
     tel: Number,
-    email: String
-
+    email: String,
+    activity: [
+        desinfeccion= Boolean,
+        avisos = Boolean,
+        fachadas = Boolean,
+        reparaciones = Boolean,
+        cajeros = Boolean,
+        otros = Boolean
+    ]
 });
 
 module.exports = mongoose.model('Program', ProgramSchema);

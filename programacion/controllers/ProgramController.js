@@ -14,6 +14,12 @@ function create(req, res) {
     program.adress = params.adress;
     program.tel = params.tel;
     program.email = params.email;
+    program.activity.desinfeccion = params.activity.desinfeccion;
+    program.activity.avisos = params.activity.avisos;
+    program.activity.fachadas = params.activity.fachadas;
+    program.activity.reparaciones= params.activity.reparaciones;
+    program.activity.cajeros = params.activity.cajeros;
+    program.activity.otros = params.activity.otros;
 
 
     program.save((error, programCreated) => {

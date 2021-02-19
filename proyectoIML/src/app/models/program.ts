@@ -6,6 +6,6 @@ export class Program{
         public adress: string,
         public tel: number,
         public email: string,
-
+        public activity: any
     ){}
 }

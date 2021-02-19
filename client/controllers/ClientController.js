@@ -13,7 +13,7 @@ function create(req, res) {
     client.email = params.email;
     client.message = params.message;
     client.tel = params.tel;
-    client.sevice=params.sevice;
+    client.service=params.service;
 
     client.save((error, clientCreated) => {
         if (error) {

@@ -24,7 +24,8 @@
               </button>
             </div>
             <div class="modal-body">
-              <form  #programarServicioForm="ngForm"
+              <form
+              #programarServicioForm="ngForm"
               (ngSubmit)="programar()" class="programForm" >
                 <div class="row">
                   <label
@@ -85,14 +86,16 @@
                   name="email" type="email" class="form-control" id="inputEmail" />
                 </div>
 
-                <div class="row mb-3 mt-3">
+
+                <div class="form-group row mb-3 mt-3">
                   <p class="col-12">Servicio que desea realizar</p>
                   <div class="col-sm-10 offset-sm-2">
-                    <div class="form-check">
+                    <div  class="form-check">
                       <input
                         class="form-check-input"
                         type="checkbox"
                         id="gridCheck1"
+                        value="desinfeccion"
                       />
                       <label class="form-check-label" for="gridCheck1">
                         Desinfección por termo-nebulización
@@ -103,6 +106,7 @@
                         class="form-check-input"
                         type="checkbox"
                         id="gridCheck2"
+                        value="avisos"
                       />
                       <label class="form-check-label" for="gridCheck2">
                         Limpieza avisos publicitarios
@@ -113,6 +117,7 @@
                         class="form-check-input"
                         type="checkbox"
                         id="gridCheck3"
+                        value="vidrios y fachadas"
                       />
                       <label class="form-check-label" for="gridCheck3">
                         Limpieza de vidrios y fachadas
@@ -123,6 +128,7 @@
                         class="form-check-input"
                         type="checkbox"
                         id="gridCheck4"
+                        value="reparaciones"
                       />
                       <label class="form-check-label" for="gridCheck4">
                         Reparaciones locativas
@@ -133,6 +139,7 @@
                         class="form-check-input"
                         type="checkbox"
                         id="gridCheck5"
+                        value="cajeros"
                       />
                       <label class="form-check-label" for="gridCheck5">
                         Limpieza cajeros automáticos
@@ -143,13 +150,14 @@
                         class="form-check-input"
                         type="checkbox"
                         id="gridCheck6"
+                        value="otros"
                       />
                       <label class="form-check-label" for="gridCheck6">
                         Servicios de limpieza
                       </label>
                     </div>
                   </div>
-                </div>
+                </div> 
                 <div class="row">
                   <h4 class="msj col-12">¡Gracias por confiar en nosotros!</h4>
                   <img

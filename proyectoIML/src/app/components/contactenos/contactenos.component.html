@@ -4,6 +4,7 @@
   #registrarCotizacionForm="ngForm"
   (ngSubmit)="cotizar()"
   class="container shadow-lg rounde border border-info p-5"
+  
 >
   <div class="container">
     <h3 class="text-info">Contáctanos</h3>
@@ -19,6 +20,7 @@
           id="inputName"
           placeholder="Escriba su nombre"
           maxlength="35"
+          required
         />
       </div>
       <div class="form-group col-md-6">
@@ -31,6 +33,7 @@
           class="form-control"
           id="inputEmail"
           placeholder="Escriba su correo"
+          required
         />
       </div>
     </div>
@@ -45,8 +48,8 @@
         placeholder="(Deja un comentario)"
         name="message"
         style="min-height: 100px; max-height: 200px"
-      />
-    </div>
+        required
+      /> 
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputTel">Teléfono</label>
@@ -57,7 +60,8 @@
           type="tel"
           class="form-control"
           id="inputTel"
-        />
+          required
+        /> 
       </div>
       <div class="form-group col-md-4">
         <label for="inputServicio">¿Qué servicio buscas?</label>
@@ -69,18 +73,19 @@
           class="form-control"
         >
           <option selected>Elije una opción</option>
-          <option> Desinfección</option>
-          <option>Mantenimiento avisos publicitarios</option>
-          <option>Limpieza vidrios y fachadas</option>
-          <option>Reparaciones locativas</option>
-          <option>Limpieza cajeros</option>
-          <option>Otros servicios</option>
+          <option value="Desinfección">Desinfección</option>
+          <option value="Mantenimiento">Mantenimiento avisos publicitarios</option>
+          <option value="Limpieza vidrios y fachadas">Limpieza vidrios y fachadas</option>
+          <option value="Reparaciones locativas">Reparaciones locativas</option>
+          <option value="Limpieza cajeros">Limpieza cajeros</option>
+          <option value="Otros servicios">Otros servicios</option> 
         </select>
       </div>
     </div>
     <button type="submit" class="btn-primary bg-info border-info">
       Enviar
     </button>
+  </div>
   </div>
 </form>
 <app-footer></app-footer>
